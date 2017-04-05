@@ -1,5 +1,6 @@
 import unittest
 from distributed_median import Computer
+from distributed_median import run
 
 class ComputerTestCase(unittest.TestCase):
     def setUp(self):
@@ -17,6 +18,8 @@ class SortNumsUponConstruction(ComputerTestCase):
         computer.remove_smallest()
         self.assertEqual(computer.nums[0], 2)
         self.assertEqual(len(computer.nums), 4)
-        
+
+    
+
 if __name__ == '__main__':
     unittest.main()
