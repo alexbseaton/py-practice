@@ -11,7 +11,7 @@ def max_sum_at_parent(row, column, max_sum_dict):
     elif column == len(rows[row]) - 1:
         return max_sum_dict[(row - 1, column - 1)]
     else:
-        return max(max_sum[(row - 1, column - 1)], max_sum[(row - 1, column)])
+        return max(max_sum_dict[(row - 1, column - 1)], max_sum_dict[(row - 1, column)])
 # populate the dictionary
 for row in range(1, len(rows)):
     for column in range(len(rows[row])):
